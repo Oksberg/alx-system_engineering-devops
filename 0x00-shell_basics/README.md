@@ -8,3 +8,4 @@ Where am I
 9. first dir delete
 10. to parent dir
 11.ordered list
+12. file_type
