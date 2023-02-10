@@ -11,3 +11,4 @@ give owner 7
 10. olleh=hello
 11. directory x permit
 12. mkdir permit 751
+13. change group
