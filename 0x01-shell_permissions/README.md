@@ -5,3 +5,4 @@ show groups
 4. create empty file called hello
 give owner 7
 6. add multi permit
+7. permit everybody
