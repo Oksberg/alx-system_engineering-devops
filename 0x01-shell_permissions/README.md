@@ -6,3 +6,4 @@ show groups
 give owner 7
 6. add multi permit
 7. permit everybody
+8. 007 now
