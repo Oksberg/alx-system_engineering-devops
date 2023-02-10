@@ -5,3 +5,4 @@ Where am I
 6. create dir in tmp
 7. move betty
 8. delete betty
+9. first dir delete
