@@ -4,3 +4,4 @@ Where am I
 5. list longdispnum
 6. create dir in tmp
 7. move betty
+8. delete betty
