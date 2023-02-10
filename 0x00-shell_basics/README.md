@@ -3,3 +3,4 @@ Where am I
 4. list hidden
 5. list longdispnum
 6. create dir in tmp
+7. move betty
