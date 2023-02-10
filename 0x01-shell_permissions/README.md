@@ -12,3 +12,4 @@ give owner 7
 11. directory x permit
 12. mkdir permit 751
 13. change group
+14. change owner and group
