@@ -13,3 +13,4 @@ give owner 7
 12. mkdir permit 751
 13. change group
 14. change owner and group
+15. symbolic links perm
