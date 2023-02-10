@@ -3,3 +3,4 @@
 show groups
 3. new owner
 4. create empty file called hello
+give owner 7
