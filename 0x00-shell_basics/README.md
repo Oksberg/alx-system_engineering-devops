@@ -6,3 +6,4 @@ Where am I
 7. move betty
 8. delete betty
 9. first dir delete
+10. to parent dir
