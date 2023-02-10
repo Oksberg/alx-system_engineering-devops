@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -r ../my_fisrt_directory
+rmdir /tmp/my_fisrt_directory
