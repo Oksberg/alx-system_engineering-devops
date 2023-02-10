@@ -9,3 +9,4 @@ Where am I
 10. to parent dir
 11.ordered list
 12. file_type
+1. symbolic_link
