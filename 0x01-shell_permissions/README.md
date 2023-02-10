@@ -9,3 +9,4 @@ give owner 7
 8. 007 now
 9. everybody can x
 10. olleh=hello
+11. directory x permit
