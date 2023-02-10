@@ -10,3 +10,4 @@ give owner 7
 9. everybody can x
 10. olleh=hello
 11. directory x permit
+12. mkdir permit 751
