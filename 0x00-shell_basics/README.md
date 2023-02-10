@@ -12,3 +12,4 @@ Where am I
 1. symbolic_link
 14. copy all html
 15. move back
+16. clean emacs
