@@ -21,3 +21,7 @@ Task 19. A to Z
 Task 20. hiago
 Task 21. reverse
 Task 22. users and homes
+Task 23. empty casks
+Task 24. gifs
+Task 25. acrostics
+Task 26. the biggest fan
