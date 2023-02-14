@@ -7,3 +7,4 @@ Task 5. show first 10
 Task 6. disp 3rd line
 Task 7. creat file weird name
 Task 8.redirects result to file
+Task 9. duplicates last line
