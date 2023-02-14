@@ -11,3 +11,4 @@ Task 9. duplicates last line
 Task 10. deletes all .js
 Task 11. counts all dir
 Task 12. lists last  10 dir
+Task 13. sorted and unique
