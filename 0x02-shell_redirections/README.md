@@ -12,3 +12,12 @@ Task 10. deletes all .js
 Task 11. counts all dir
 Task 12. lists last  10 dir
 Task 13. sorted and unique
+Task 14. find that word
+Task 15. count that word
+Task 16. what's next
+Task 17. hide this word
+Task 18. letter only
+Task 19. A to Z
+Task 20. hiago
+Task 21. reverse
+Task 22. users and homes
