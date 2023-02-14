@@ -6,3 +6,4 @@ Task 4. disp last 10
 Task 5. show first 10
 Task 6. disp 3rd line
 Task 7. creat file weird name
+Task 8.redirects result to file
