@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
-This bash script lists the content of the current directory in a list format. For each file display only the part of the name after the first dash.
+#This bash script lists the content of the current directory in a list format. For each file display only the part of the name after the first dash.
 
 
-files=$(ls)
-for file in $files
+for file in *
 do
-	echo "$file" | cut -d"-" -f2
+	if [ -f "$file" ]
+	then
+		cut_separator=$(echo "$file" | cut -d"-" -f2)
+		echo "$cut_separator"
+	fi
 done
