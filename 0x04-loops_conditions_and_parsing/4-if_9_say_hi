@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script uses a while loop to display Best School 10 times. On the 9th, Hi is displayed on a new line after displaying Best School, and then displays the last Best School on the 10th loop.
+
+counter=0
+while ((counter < 10))
+do
+	if ((counter == 8))
+	then
+		echo "Best School"
+		echo "Hi"
+	else
+		echo "Best School"
+	fi
+
+	((counter++))
+done

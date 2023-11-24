@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script uses a while loop to display Best School 8 times, bad luck once and good luck once. On the 4th loop, it displays bad luck, and also displays good luck on the 8th loop. For all other loops, Best School is displayed.
+
+counter=0
+while ((counter < 10))
+do
+	if ((counter == 3))
+	then
+		echo "bad luck"
+	elif ((counter == 7))
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+
+	((counter++))
+done

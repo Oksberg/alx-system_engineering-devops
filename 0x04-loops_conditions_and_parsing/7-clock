@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#This script uses while loops to display a digital clock from 0 t0 12 hours, while displaying the minutes between them too. 
+
+
+hour=0
+while ((hour < 13))
+do
+	echo "Hour:" $hour
+	minute=1
+	while ((minute < 60))
+	do
+		echo $minute
+		((minute++))
+	done
+
+	((hour++))
+done
