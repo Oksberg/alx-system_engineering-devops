@@ -9,16 +9,17 @@ if [ -e "$school_file" ]
 then
 	echo "school file exists"
 
-	if [ -s "$school_file" ]
+	if [ -f "$school_file" ]
 	then
-		echo "school file is not empty"
-		if [ -f "$school_file" ]
-		then
-			echo "school file is a regular file"
-		fi
+		echo "school file is a regular file"
 
-	else
-		echo "school file is empty"
+		if [ -s "$school_file" ]
+		then
+			echo "school file is not empty"
+		else
+			echo "school file is empty"
+
+		fi
 	fi
 
 else
