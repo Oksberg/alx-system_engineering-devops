@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-#This script displays all active IPv4 IPs on the machine it’s executed on.
-
-
-sudo ipconfig | grep IPv4
