@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#This script changes IPs of some hosts.
+
+cp /etc/hosts ~/hosts.new
+sed -i 's/127.0.0.1/127.0.0.2/' ~/hosts.new
+sed -i '/facebook.com/d' ~/hosts.new
+echo "facebook.com      8.8.8.8" >> ~/hosts.new
+cp -f ~/hosts.new /etc/hosts

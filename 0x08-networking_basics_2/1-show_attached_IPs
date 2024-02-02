@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#This script displays all active IPv4 IPs.
+
+ip addr
