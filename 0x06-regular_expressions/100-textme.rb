@@ -3,4 +3,4 @@
 #a sender and a receiver of a text in addition to
 #the flags that were used.
 
-puts ARGV[0].scan(/(\+?\d{9,12}|^[A-Z][a-z]+),(\+?\d{9,12}|^[A-Z][a-z]+),(-\d:\d:-\d:\d:-\d)/).join
+puts ARGV[0].scan(/\[from:(.*?)\] \[to:(.*?)\] \[flags:(.*?)\]/).join(",")
