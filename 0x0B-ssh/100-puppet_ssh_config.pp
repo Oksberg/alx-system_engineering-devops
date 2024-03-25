@@ -1,10 +1,6 @@
 # Creates a manifest called config in ~/.ssh/
 # Configured to use the private key ~/.ssh/school
-file {'/root/.ssh/config':
+file {'/root/.ssh/school':
   ensure  => present,
-  content => 'Host 272031-web-01\n\
-              Hostname 272031-web-01\n\
-              User ubuntu\n\
-              IdentityFile ~/.ssh/school\n\
-              PasswordAuthentication no\n'
+  content => 'PasswordAuthentication => no\nIdentityFile /root/.ssh/school'
 }
