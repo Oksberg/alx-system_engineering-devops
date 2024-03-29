@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+# Configures nginx with my server ip and a return string
 server {
         listen 80;
         listen [::]:80;
