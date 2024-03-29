@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Configures nginx with my server ip and a return string
-apt-get update
-apt-get -y install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
 
 #Creating new configuration for Nginx
-cat /etc/nginx/sites-available/1-install_nginx_web_server <<EOF
+sudo cat /etc/nginx/sites-available/1-install_nginx_web_server <<EOF
 server {
         listen 80;
         listen [::]:80;
@@ -22,7 +22,7 @@ server {
 EOF
 
 # Enabling the new configuration
-ln -s /etc/nginx/sites-available/1-install_nginx_web_server /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/1-install_nginx_web_server /etc/nginx/sites-enabled/
 
 # Restarting Nginx to applyy changes
-service nginx restart
+sudo service nginx restart
