@@ -1,28 +1,19 @@
 #!/usr/bin/env bash
 # Configures nginx with my server ip and a return string
+
+#Updating and installing Nginx
 sudo apt-get -y update
 sudo apt-get -y install nginx
 
-#Creating new configuration for Nginx
-sudo cat /etc/nginx/sites-available/1-install_nginx_web_server <<EOF
-server {
-        listen 80;
-        listen [::]:80;
+#Assigning ownership of root directory to User
+sudo chown -R $USER:$USER /var/www/html
+sudo chmod -R 755 var/www
 
-        root /var/www/html;
+#Backing up default nginx index for safe keeping
+cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.backup
 
-        index index.html index.htm index.nginx-debian.html;
+#Modifying index with new output string
+echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
 
-        server_name 100.27.0.213;
-
-        location / {
-                return 200 "Hello World!\n";
-        }
-}
-EOF
-
-# Enabling the new configuration
-sudo ln -s /etc/nginx/sites-available/1-install_nginx_web_server /etc/nginx/sites-enabled/
-
-# Restarting Nginx to applyy changes
+# Restarting Nginx to apply changes
 sudo service nginx restart
