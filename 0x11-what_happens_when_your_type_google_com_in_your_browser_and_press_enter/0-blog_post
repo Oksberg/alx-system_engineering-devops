@@ -1,0 +1,41 @@
+What happens when you type "https://www.google.com" and press Enter? Hmmm!! The answer to this question could be simply put as magic. Yes, it may be called magic because of how easy and simple it looks, but everything that happens after 'Enter' is pressed is orchestrated based on carefully written rules, and instructions often called protocols and configurations. These protocols and configurations are procedural and follow specific sequences.
+
+These procedures and sequences can be grouped into 3 stages namely connection stage, server processes stage, and browser rendering stage.
+Each stage has various processes that happen in there.
+The connection stage consists of the DNS request, TCP/IP connection, Firewall passing, HTTPS/SSL handshake, and HTTP request.
+
+1. DNS request
+After 'Enter' is pressed, the browser querries the DNS server for the IP address that the subdomain "www.google.com" resolves to. The DNS server will then return the appropriate IP for google.com to the browser.
+
+2. TCP/IP Connection
+Once the browser has obtained the right IP for google.com, it initiates a connection to that IP using specific instructions called Transmission Control Protocol (TCP).
+
+3. Firewall Passing
+Before the TCP/IP connection is established, the firewalls for the client  and the server analyze the outgoing and incoming connections based on predefined security rules. Based on these rules, the firewalls may block or allow a TCP connection between the two IPs.
+
+4. HTTPS/SSL Handshake
+Because "https://www.google.com" was typed, after the TCP/IP connection is established the browser will initiate an SSL/TLS handshake to establish a secured connection that provides encryption for the communication between the browser and the "www.google.com" server. The server ensures that the handshake was successful by sending the browser an SSL certificate.
+
+5. HTTP Request
+After the secure connection is established, the browser sends an HTTP request for the homepage of google.com.
+
+Now that a secure connection has been established and the HTTP requet has been sent, the second stage that I have tagged Server Processes is ushered in. This stage we have the load-balancer, the web server, the application server, and the database.
+
+6. Load-Balancer
+The server setup manages traffic by employing load balancers. The load-balancer is responsible for the even distribution of client requests among servers (in a multi-server system), and among web servers or application servers (in a multi-homing configuration). It can also detect faulty servers and reroute requests for efficient running of the server/s.
+
+7. Web Server
+After the load-balancer has decided which web server instance receives the browser's HTTP request, the web server receives the incoming request, processes the basic requests and runs any required JavaScript scripts. The web server communicates with the application server to continue the process, if there is the need.
+
+8. Application Server
+The application server is responsible for serving dynamic content, and executing application logic. It also interacts with the database when there is the need to store or retrieve information.
+
+9. Database
+The database stores, manages and makes data or information available to the application server to provide to the web browser.
+
+After all the Server Processes have been completed, a response is generated and sent to the browser. Now you have a response to the HTTP request, but how is it to be presented? This is where the third and final stage tagged Rendering is entered.
+
+10. Rendering
+This is the presentation stage where the browser decrypts the response, puts the pieces from HTML, CSS and JavaScript together, and presents it according to the instructions in them. This process is called rendering.
+
+That was cumbersome, wasn't it? To have all this done as easily and as fast as it is usually done when you type "https://www.google.com" is purely awesome. So permit me to say that magic happens.
