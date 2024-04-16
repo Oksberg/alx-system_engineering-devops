@@ -1,0 +1,12 @@
+sudo ufw update
+sudo ufw status
+sudo ufw reset
+sudo ufw deny incoming
+sudo ufw allow outgoing
+sudo systemctl status ufw
+sudo systemctl stop ufw
+sudo ufw allow ssh
+sudo ufw allow htpp
+sudo ufw allow https
+sudo systemctl start ufw
+sudo ufw enable
