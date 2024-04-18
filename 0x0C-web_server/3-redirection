@@ -16,7 +16,7 @@ cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.b
 echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
 
 #Configure Nginx to redirect redirect_me
-sudo sed -i '53i\ \nrewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n' /etc/nginx/sites-available/default
+sudo sed -i '53i\ \nserver {\n  listen 80;\n    server_name 100.27.0.213;\n\n   location /redirect_me/ {\n              return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n       }\n}' /etc/nginx/sites-available/default
 
 # Restarting Nginx to apply changes
 sudo service nginx restart
