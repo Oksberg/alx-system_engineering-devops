@@ -7,13 +7,16 @@ sudo apt-get -y install nginx
 
 #Assigning ownership of root directory to User
 sudo chown -R $USER:$USER /var/www/html
-sudo chmod -R 755 /var/www
+sudo chmod -R 755 var/www
 
 #Backing up default nginx index for safe keeping
 cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.backup
 
 #Modifying index with new output string
 echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+
+#Configure Nginx to redirect redirect_me
+sudo sed -i '53i\ \nrewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n' /etc/nginx/sites-available/default
 
 # Restarting Nginx to apply changes
 sudo service nginx restart
