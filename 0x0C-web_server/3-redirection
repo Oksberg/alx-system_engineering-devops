@@ -7,7 +7,7 @@ sudo apt-get -y install nginx
 
 #Assigning ownership of root directory to User
 sudo chown -R "$USER":"$USER" /var/www/html
-sudo chmod -R 755 var/www
+sudo chmod -R 755 /var/www
 
 #Backing up default nginx index for safe keeping
 cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.backup
@@ -15,8 +15,21 @@ cp /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.b
 #Modifying index with new output string
 echo -e "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
 
-#Configure Nginx to redirect redirect_me
-sudo sed -i '53i\ \nserver {\n  listen 80;\n    server_name 100.27.0.213;\n\n   location /redirect_me/ {\n              return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n       }\n}' /etc/nginx/sites-available/default
+#Backing up a default config file for contingency
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.backup
+
+#Configuring Nginx for to redirect redirect_me
+echo 'server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
+        root /var/www/html;
+        index index.html;
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}' | sudo tee /etc/nginx/sites-available/default > /dev/null
+
+new_string="\\\t\trewrite ^/redirect_me  https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"                                sudo sed -i "7i $new_string" /etc/nginx/sites-available/default
 
 # Restarting Nginx to apply changes
-sudo service nginx restart
+sudo systemctl restart nginx
